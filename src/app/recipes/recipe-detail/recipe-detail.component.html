@@ -53,4 +53,11 @@
     </div>
     <br><button type="submit" [disabled]="!f.valid" class="btn btn-success">Submit</button><br>
   </form>
+  <br>
+  <button (click)="loadRecipies()" class="btn btn-info">Load Recipies</button>
+  <ul><br>
+      <li *ngFor="let ud of loadedPosts">
+         <i><strong> {{ud.ingname | uppercase }}<br>{{ud.email}},<br> {{ud.price | currency}},<br> {{ud.ingredients}}<br><br> </strong></i>
+      </li>
+  </ul>
 </div>

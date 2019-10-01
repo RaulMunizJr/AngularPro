@@ -7,7 +7,8 @@ import { RecipeListComponent } from "./recipes/recipe-list/recipe-list.component
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item.component";
 import { RecipeData } from './shared/recipedata.service';
-
+import { HttpClientModule } from '@angular/common/http';
+import { dbConnect } from './shared/dbConnect.service';
 import { LikeComponent } from './like/like.component';
 import { ChildModule } from './child.module';
 import { SharedModule } from './shared.module';
@@ -22,9 +23,9 @@ import { SharedModule } from './shared.module';
     LikeComponent
   ],
   imports: [
-    BrowserModule, ChildModule, SharedModule, FormsModule
+    BrowserModule, ChildModule, SharedModule, FormsModule, HttpClientModule
   ],
-  providers: [RecipeData],
+  providers: [RecipeData, dbConnect],
   bootstrap: [RecipeBookAppComponent]
 })
 export class AppModule {}
