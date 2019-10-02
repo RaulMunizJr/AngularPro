@@ -6,6 +6,8 @@ import { ShoppingListAddComponent } from "./shopping-list/shopping-list-add.comp
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { SharedModule } from './shared.module';
 
+import { AppRouting } from './app.routing';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -18,7 +20,7 @@ import { SharedModule } from './shared.module';
       ShoppingListAddComponent
       ],
   imports: [
-    BrowserModule, SharedModule
+    BrowserModule, SharedModule, AppRouting
   ],
   
 })

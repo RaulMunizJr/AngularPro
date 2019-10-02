@@ -12,6 +12,7 @@ import { dbConnect } from './shared/dbConnect.service';
 import { LikeComponent } from './like/like.component';
 import { ChildModule } from './child.module';
 import { SharedModule } from './shared.module';
+import { AppRouting } from './app.routing';
 
 @NgModule({
   declarations: [
